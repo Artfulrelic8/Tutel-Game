@@ -12,8 +12,10 @@ public class FPSCounter : MonoBehaviour
     }
     float timer;
     int delay = 1;
-    public int avgFrameRate;
-    public Text display_Text;
+    private int avgFrameRate;
+    public GameObject FPS;
+
+
 
     public void Update()
     {
@@ -23,7 +25,7 @@ public class FPSCounter : MonoBehaviour
             float current = 0;
             current = (int)(1f / Time.unscaledDeltaTime);
             avgFrameRate = (int)current;
-            display_Text.text = avgFrameRate.ToString() + " FPS";
+            FPS.GetComponent<Text>().text = avgFrameRate.ToString() + " FPS";
         }
     }
 }
