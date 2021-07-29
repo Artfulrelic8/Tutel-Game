@@ -1604,7 +1604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315.1, y: 190.2}
+  m_AnchoredPosition: {x: -299, y: 166}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1641630873
@@ -1793,7 +1793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 182.3}
+  m_AnchoredPosition: {x: 0, y: 153}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729834142
@@ -1858,6 +1858,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2593122021827578360, guid: 7c74ea4d05ff9264e8810dec63164f1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5044
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593122021827578360, guid: 7c74ea4d05ff9264e8810dec63164f1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593122021827578360, guid: 7c74ea4d05ff9264e8810dec63164f1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593122021827578360, guid: 7c74ea4d05ff9264e8810dec63164f1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593122021827578360, guid: 7c74ea4d05ff9264e8810dec63164f1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593122021827578360, guid: 7c74ea4d05ff9264e8810dec63164f1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3314420057756515457, guid: 7c74ea4d05ff9264e8810dec63164f1d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2169,6 +2193,18 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1030122955}
+    - target: {fileID: 4512115532213317317, guid: bd9c446bc8bda964cae8304ade8a2aba, type: 3}
+      propertyPath: m_Speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512115532213317317, guid: bd9c446bc8bda964cae8304ade8a2aba, type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512115532213317317, guid: bd9c446bc8bda964cae8304ade8a2aba, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 4512115532213317317, guid: bd9c446bc8bda964cae8304ade8a2aba, type: 3}
       propertyPath: m_StoppingDistance
       value: 5
