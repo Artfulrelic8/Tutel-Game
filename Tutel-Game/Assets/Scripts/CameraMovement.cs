@@ -84,16 +84,6 @@ public class CameraMovement : MonoBehaviour
             float dy = (p2 - p1).y * rotateSpeed;
 
             transform.rotation *= Quaternion.Euler(new Vector3(0, dx, 0));
-            /*if (transform.GetChild(0).transform.rotation.x >= 90 || transform.rotation.x <= -90)
-            {
-                transform.GetChild(0).transform.rotation = transform.GetChild(0).transform.rotation;
-            } 
-            else
-            {
-                transform.GetChild(0).transform.rotation *= Quaternion.Euler(new Vector3(-dy, 0, 0));
-            }*/
-           
-            
         }
     }
 }
