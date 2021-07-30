@@ -9,9 +9,9 @@ public class ResourceCount : MonoBehaviour
 
     public Text text;
 
-    int count = 0;
-    int delay = 1;
-    float timer;
+    public int count = 0;
+    //int delay = 1;
+    //float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class ResourceCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+      /*  timer += Time.deltaTime;
         if (timer >= delay )
         {
             timer = 0f;
@@ -31,7 +31,7 @@ public class ResourceCount : MonoBehaviour
                 count++;
                 text.text = "Water " + count;
             }
-        }
+        }*/
     }
 
 }
