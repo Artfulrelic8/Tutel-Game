@@ -18,4 +18,28 @@ public class WaterScript : MonoBehaviour
     {
         
     }
+
+    void addVillager(GameObject villager)
+    {
+        if(this.isFull() == -1)
+        {
+            Debug.Log("There are enough Villagers working there already!");
+        }
+        else
+        {
+            this.assignedV[this.isFull()] = villager;
+        }
+    }
+
+    int isFull()
+    {
+        for(int i = 0; i < assignedV.Length; i++)
+        {
+            if(assignedV[i] == null)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
