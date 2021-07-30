@@ -9,6 +9,9 @@ public class WaterScript : MonoBehaviour
 
     public GameObject[] assignedV = new GameObject[5];
     public Text WaterCounter;
+    float timer;
+    int delay = 1;
+    //int counter = 0;
 
     void Start()
     {
@@ -20,7 +23,23 @@ public class WaterScript : MonoBehaviour
     {
         int a = this.numV();
         int b = WaterCounter.GetComponent<ResourceCount>().count;
-        WaterCounter.GetComponent<ResourceCount>().text.text = "Water: " + (a + b);
+        //int b = WaterCounter.GetComponent<ResourceCount>().count;
+        Debug.Log(a + " " + b);
+        timer += Time.deltaTime;
+        if (timer >= delay)
+        {
+            timer = 0f;
+            if (a + b >= 1000)
+            {
+                WaterCounter.GetComponent<ResourceCount>().text.text = "Water: " + (1000 + 0);
+            }
+            else
+            {
+                WaterCounter.GetComponent<ResourceCount>().text.text = "Water: " + (a + b);
+                WaterCounter.GetComponent<ResourceCount>().count = WaterCounter.GetComponent<ResourceCount>().count + a;
+                //counter = counter + a;
+            }
+        }
     }
 
     void addVillager(GameObject villager)
@@ -32,6 +51,7 @@ public class WaterScript : MonoBehaviour
         else
         {
             this.assignedV[this.isFull()] = villager;
+            //this.villager.isSelected = true;
         }
     }
 

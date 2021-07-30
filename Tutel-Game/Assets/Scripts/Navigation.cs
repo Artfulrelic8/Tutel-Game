@@ -6,19 +6,23 @@ using UnityEngine.AI;
 public class Navigation : MonoBehaviour
 {
 
-    public Transform target;
-    NavMeshAgent agent;
+    //public Transform target;
+   // NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        //agent = GetComponent<NavMeshAgent>();
     }
     
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(target.position);
-        
+        /*if (Input.GetMouseButtonDown(1))
+        {
+            move();
+        }*/
     }
+
+    
 }
