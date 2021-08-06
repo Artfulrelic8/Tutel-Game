@@ -21,12 +21,13 @@ public class NavDestination : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1)){
-            var ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if(Physics.Raycast(ray, out hit, 1000))
+        if (Input.GetMouseButtonDown(1))
+        {
+            var rayR = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitR;
+            if(Physics.Raycast(rayR, out hitR, 1000) && hitR.collider.tag == "Ground")
             {
-                vec = hit.point;
+                vec = hitR.point;
                 Destination.transform.position = vec;
                 move();
             }

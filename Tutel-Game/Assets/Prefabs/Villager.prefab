@@ -147,6 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  ground: {fileID: 0}
-  Destination: {fileID: 0}
-  target: {fileID: 0}
+  ground: {fileID: 4607606275891790507, guid: 4ff52966cd67b44448dc4f017ee55b4f, type: 3}
+  Destination: {fileID: 3068929529360743613, guid: b973dd1d05e341748bedfedb87fb0ce9, type: 3}
+  workstation: {fileID: 0}
