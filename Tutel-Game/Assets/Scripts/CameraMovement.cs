@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-
+    public float deadzonex;
+    public float deadzoney;
+    private float dx;
+    private float dy;
     float speed = 0.06f;
     float zoomSpeed = 10f;
     float rotateSpeed = 0.01f;
@@ -68,7 +71,7 @@ public class CameraMovement : MonoBehaviour
         transform.position += move;
         getCameraRotation();
     }
-
+    public float balls;
     void getCameraRotation()
     {
         if (Input.GetMouseButtonDown(2))
@@ -80,8 +83,12 @@ public class CameraMovement : MonoBehaviour
         {
             p2 = Input.mousePosition;
 
-            float dx = (p2 - p1).x * rotateSpeed;
-            float dy = (p2 - p1).y * rotateSpeed;
+            dx = (p2 - p1).x * rotateSpeed;
+            Debug.Log(dx);
+            
+            dy = (p2 - p1).y * rotateSpeed;
+            p1.x += (p2.x - p1.x) * balls;
+            
 
             transform.rotation *= Quaternion.Euler(new Vector3(0, dx, 0));
         }

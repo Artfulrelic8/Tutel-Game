@@ -24,7 +24,7 @@ public class WaterScript : MonoBehaviour
         int a = this.numV();
         int b = WaterCounter.GetComponent<ResourceCount>().count;
         //int b = WaterCounter.GetComponent<ResourceCount>().count;
-        Debug.Log(a + " " + b);
+        //Debug.Log(a + " " + b);
         timer += Time.deltaTime;
         if (timer >= delay)
         {
@@ -44,6 +44,19 @@ public class WaterScript : MonoBehaviour
 
     void addVillager(GameObject villager)
     {
+        for(int i = 0; i < assignedV.Length; i++)
+        {
+            if(assignedV[i].name == villager.name)
+            {
+                Debug.Log("Fuck off im working here");
+                return;
+            }
+        }
+        if(villager.tag != "Villager")
+        {
+            return;
+        }
+
         if(this.isFull() == -1)
         {
             Debug.Log("There are enough Villagers working there already!");
