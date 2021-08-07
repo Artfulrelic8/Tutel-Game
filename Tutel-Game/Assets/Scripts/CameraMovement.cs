@@ -10,7 +10,7 @@ public class CameraMovement : MonoBehaviour
     private float dy;
     float speed = 0.06f;
     float zoomSpeed = 10f;
-    float rotateSpeed = 0.01f;
+    public float rotateSpeed = 0.01f;
 
     float maxHeight = 60f;
     float minHeight = 11f;
@@ -71,7 +71,7 @@ public class CameraMovement : MonoBehaviour
         transform.position += move;
         getCameraRotation();
     }
-    public float balls;
+    public float approxSpeed;
     void getCameraRotation()
     {
         if (Input.GetMouseButtonDown(2))
@@ -87,7 +87,7 @@ public class CameraMovement : MonoBehaviour
             Debug.Log(dx);
             
             dy = (p2 - p1).y * rotateSpeed;
-            p1.x += (p2.x - p1.x) * balls;
+            p1.x += (p2.x - p1.x) * approxSpeed;
             
 
             transform.rotation *= Quaternion.Euler(new Vector3(0, dx, 0));
